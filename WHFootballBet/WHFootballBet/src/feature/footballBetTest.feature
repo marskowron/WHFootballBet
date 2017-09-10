@@ -27,13 +27,13 @@ Description: This feature is to test placing a single bet on random football eve
 @tag1
 Scenario Outline: Place a bet on any football event
 Given User in on the Home page of WilliamHill website
-When User chooses any football events
-	And predicts for the home team to <match_result>
-	And and places <betslip_stake> bet
-Then He has 1 bet in basket
+When User chooses any <sportCategory> events
+	And predicts for the home team to win
+	And and places <betslipStake> bet
+Then He has "1" bet in basket
 	And it displays the odd and return
 
 Examples:
-    | betslip_stake  |match_result |
-    | 0.05 |  Win   | 
+    | sportCategory  | betslipStake  | matchResult  |
+    | "Football"  | "0.05"  | "1"  |
  

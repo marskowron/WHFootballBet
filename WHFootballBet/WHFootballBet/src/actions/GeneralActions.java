@@ -82,7 +82,7 @@ public class GeneralActions extends Driver{
 			
 			WebDriverWait wait = new WebDriverWait(Instance, timeout);
 			element = wait.until(
-					ExpectedConditions.visibilityOf(waitElement));
+					ExpectedConditions.elementToBeClickable(waitElement));
 			log.debug("Element " + waitElement+" appeared on the web page");	
 		} catch(Exception e) {
 			log.error("Element " + waitElement+" not appeared on the web page");

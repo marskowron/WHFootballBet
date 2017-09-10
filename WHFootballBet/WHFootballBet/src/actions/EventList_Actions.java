@@ -28,7 +28,7 @@ public class EventList_Actions extends EventList_Objects{
 		return buttonResult;
 	}
 	
-	public static double calculateOddOfBet (int eventIndex, String expectedResult) {
+	public static double calculateOddsOfBet (int eventIndex, String expectedResult) {
 		
 		double betOdd;
 		double nominator;
@@ -44,6 +44,7 @@ public class EventList_Actions extends EventList_Objects{
 	}
 	
 	public static void doBetForSelectedEvent (int eventIndex, String expectedResult) {
+		System.out.println(eventIndex + expectedResult);
 		element = chooseResultOfSelectedEvent(eventIndex, expectedResult);
 		element.click();
 	}

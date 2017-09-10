@@ -13,7 +13,7 @@ public class EventList_Objects extends GeneralActions{
 	private static List<WebElement> elements;
 	
 	public static List<WebElement> getEventList () {
-		elements = Instance.findElement(By.id("competitions-list"))
+		elements = waitForElement("competitions-list", "id")
 					.findElements(By.className("event"));
 		return elements;
 	}

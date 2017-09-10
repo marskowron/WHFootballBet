@@ -7,7 +7,7 @@ import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-
+import cucumber.api.Scenario;
 
 public class Driver {
 
@@ -22,7 +22,7 @@ public class Driver {
 		Instance.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		Instance.manage().window().maximize();
 		
-		baseURL = "http://sports.williamhill.com/betting/en-gb"; // CR? 
+		baseURL = "http://sports.williamhill.com/betting/en-gb"; 
 		
 		Instance.get(baseURL);
 		String currentUrl = Driver.Instance.getCurrentUrl();
