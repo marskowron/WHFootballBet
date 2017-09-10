@@ -2,18 +2,17 @@ package driver;
 
 import java.util.concurrent.TimeUnit;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+//import org.apache.logging.log4j.LogManager;
+//import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-import cucumber.api.Scenario;
 
 public class Driver {
 
 	
 	public static WebDriver Instance;
-	private static final Logger log = LogManager.getLogger(Driver.class.getName());
+	//private static final Logger log = LogManager.getLogger(Driver.class.getName());
 	public static String baseURL;
 	
 	public static void Initialize() {
@@ -26,7 +25,7 @@ public class Driver {
 		
 		Instance.get(baseURL);
 		String currentUrl = Driver.Instance.getCurrentUrl();
-		log.info(currentUrl);			
+		System.out.println(currentUrl);			
 	}
 	
 	public static void closure () {

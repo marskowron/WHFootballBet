@@ -15,7 +15,7 @@ import actions.GeneralActions;
 
 public class GeneralActions extends Driver{
 
-	private static final Logger log = LogManager.getLogger(GeneralActions.class.getName());
+	//private static final Logger log = LogManager.getLogger(GeneralActions.class.getName());
 	private static int defaultTimeout = 20;
 	static WebElement element;
 	static List<WebElement> elements;
@@ -65,27 +65,27 @@ public class GeneralActions extends Driver{
 		WebElement searchedElement = getElement(locator, type);
 		
 		try {
-			log.debug("Waiting for element: " + searchedElement+ " to be available");
+			System.out.println("Waiting for element: " + searchedElement+ " to be available");
 			WebDriverWait wait = new WebDriverWait(Instance, defaultTimeout);
 			element = wait.until(
 					ExpectedConditions.visibilityOf(searchedElement));
-			log.debug("Element " + searchedElement+" appeared on the web page");	
+			System.out.println("Element " + searchedElement+" appeared on the web page");	
 		} catch(Exception e) {
-			log.error("Element " + searchedElement+" not appeared on the web page");
+			System.out.println("Element " + searchedElement+" not appeared on the web page");
 		}
 		return element;
 	}
 	
 	public static WebElement waitForElementForDefineTime(WebElement waitElement, int timeout) {
 		try {
-			log.debug("Waiting for: " + timeout + " seconds for element: " + waitElement+" to be available");
+			System.out.println("Waiting for: " + timeout + " seconds for element: " + waitElement+" to be available");
 			
 			WebDriverWait wait = new WebDriverWait(Instance, timeout);
 			element = wait.until(
 					ExpectedConditions.elementToBeClickable(waitElement));
-			log.debug("Element " + waitElement+" appeared on the web page");	
+			System.out.println("Element " + waitElement+" appeared on the web page");	
 		} catch(Exception e) {
-			log.error("Element " + waitElement+" not appeared on the web page");
+			System.out.println("Element " + waitElement+" not appeared on the web page");
 		}
 		return element;
 	}
@@ -107,7 +107,7 @@ public class GeneralActions extends Driver{
 	}
 	
 	public static void assertValue (String currentValue, String expectedValue) {
-		log.info("Current value: " + currentValue + " || Expected value: " + expectedValue);
+		System.out.println("Current value: " + currentValue + " || Expected value: " + expectedValue);
 		Assert.assertEquals(currentValue, expectedValue);
 		}
 	

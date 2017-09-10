@@ -1,22 +1,4 @@
-#Author: your.email@your.domain.com
-#Keywords Summary :
-#Feature: List of scenarios.
-#Scenario: Business rule through list of steps with arguments.
-#Given: Some precondition step
-#When: Some key actions
-#Then: To observe outcomes or validation
-#And,But: To enumerate more Given,When,Then steps
-#Scenario Outline: List of steps for data-driven as an Examples and <placeholder>
-#Examples: Container for s table
-#Background: List of steps run before each of the scenarios
-#""" (Doc Strings)
-#| (Data Tables)
-#@ (Tags/Labels):To group Scenarios 
-#<> (placeholder)
-#""
-## (Comments)
-
-#Sample Feature Definition Template
+#Author: Marcin Skowron
 
 @tag
 Feature: Placing a bet on football event
@@ -28,12 +10,13 @@ Description: This feature is to test placing a single bet on random football eve
 Scenario Outline: Place a bet on any football event
 Given User in on the Home page of WilliamHill website
 When User chooses any <sportCategory> events
-	And predicts for the home team to win
+	And predicts for <indexEvent> the home team to <matchResult>
 	And and places <betslipStake> bet
 Then He has "1" bet in basket
-	And it displays the odd and return
+	And it displays the odd and return according to <betslipStake> stake, <indexEvent> and <matchResult>
+
 
 Examples:
-    | sportCategory  | betslipStake  | matchResult  |
-    | "Football"  | "0.05"  | "1"  |
+    | sportCategory  | betslipStake  | matchResult  | indexEvent  |
+    | "Football"  | "0.05"  | 1  | 1  |
  

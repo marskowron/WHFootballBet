@@ -3,91 +3,23 @@ formatter.feature({
   "comments": [
     {
       "line": 1,
-      "value": "#Author: your.email@your.domain.com"
-    },
-    {
-      "line": 2,
-      "value": "#Keywords Summary :"
-    },
-    {
-      "line": 3,
-      "value": "#Feature: List of scenarios."
-    },
-    {
-      "line": 4,
-      "value": "#Scenario: Business rule through list of steps with arguments."
-    },
-    {
-      "line": 5,
-      "value": "#Given: Some precondition step"
-    },
-    {
-      "line": 6,
-      "value": "#When: Some key actions"
-    },
-    {
-      "line": 7,
-      "value": "#Then: To observe outcomes or validation"
-    },
-    {
-      "line": 8,
-      "value": "#And,But: To enumerate more Given,When,Then steps"
-    },
-    {
-      "line": 9,
-      "value": "#Scenario Outline: List of steps for data-driven as an Examples and \u003cplaceholder\u003e"
-    },
-    {
-      "line": 10,
-      "value": "#Examples: Container for s table"
-    },
-    {
-      "line": 11,
-      "value": "#Background: List of steps run before each of the scenarios"
-    },
-    {
-      "line": 12,
-      "value": "#\"\"\" (Doc Strings)"
-    },
-    {
-      "line": 13,
-      "value": "#| (Data Tables)"
-    },
-    {
-      "line": 14,
-      "value": "#@ (Tags/Labels):To group Scenarios"
-    },
-    {
-      "line": 15,
-      "value": "#\u003c\u003e (placeholder)"
-    },
-    {
-      "line": 16,
-      "value": "#\"\""
-    },
-    {
-      "line": 17,
-      "value": "## (Comments)"
-    },
-    {
-      "line": 19,
-      "value": "#Sample Feature Definition Template"
+      "value": "#Author: Marcin Skowron"
     }
   ],
-  "line": 22,
+  "line": 4,
   "name": "Placing a bet on football event",
   "description": "Description: This feature is to test placing a single bet on random football event\r\nAs a WH Customer \r\nI want the ability to place a bet on a football event",
   "id": "placing-a-bet-on-football-event",
   "keyword": "Feature",
   "tags": [
     {
-      "line": 21,
+      "line": 3,
       "name": "@tag"
     }
   ]
 });
 formatter.scenarioOutline({
-  "line": 28,
+  "line": 10,
   "name": "Place a bet on any football event",
   "description": "",
   "id": "placing-a-bet-on-football-event;place-a-bet-on-any-football-event",
@@ -95,43 +27,43 @@ formatter.scenarioOutline({
   "keyword": "Scenario Outline",
   "tags": [
     {
-      "line": 27,
+      "line": 9,
       "name": "@tag1"
     }
   ]
 });
 formatter.step({
-  "line": 29,
+  "line": 11,
   "name": "User in on the Home page of WilliamHill website",
   "keyword": "Given "
 });
 formatter.step({
-  "line": 30,
+  "line": 12,
   "name": "User chooses any \u003csportCategory\u003e events",
   "keyword": "When "
 });
 formatter.step({
-  "line": 31,
-  "name": "predicts for the home team to win",
+  "line": 13,
+  "name": "predicts for \u003cindexEvent\u003e the home team to \u003cmatchResult\u003e",
   "keyword": "And "
 });
 formatter.step({
-  "line": 32,
+  "line": 14,
   "name": "and places \u003cbetslipStake\u003e bet",
   "keyword": "And "
 });
 formatter.step({
-  "line": 33,
+  "line": 15,
   "name": "He has \"1\" bet in basket",
   "keyword": "Then "
 });
 formatter.step({
-  "line": 34,
-  "name": "it displays the odd and return",
+  "line": 16,
+  "name": "it displays the odd and return according to \u003cbetslipStake\u003e stake, \u003cindexEvent\u003e and \u003cmatchResult\u003e",
   "keyword": "And "
 });
 formatter.examples({
-  "line": 36,
+  "line": 19,
   "name": "",
   "description": "",
   "id": "placing-a-bet-on-football-event;place-a-bet-on-any-football-event;",
@@ -140,25 +72,27 @@ formatter.examples({
       "cells": [
         "sportCategory",
         "betslipStake",
-        "matchResult"
+        "matchResult",
+        "indexEvent"
       ],
-      "line": 37,
+      "line": 20,
       "id": "placing-a-bet-on-football-event;place-a-bet-on-any-football-event;;1"
     },
     {
       "cells": [
         "\"Football\"",
         "\"0.05\"",
-        "\"1\""
+        "1",
+        "1"
       ],
-      "line": 38,
+      "line": 21,
       "id": "placing-a-bet-on-football-event;place-a-bet-on-any-football-event;;2"
     }
   ],
   "keyword": "Examples"
 });
 formatter.scenario({
-  "line": 38,
+  "line": 21,
   "name": "Place a bet on any football event",
   "description": "",
   "id": "placing-a-bet-on-football-event;place-a-bet-on-any-football-event;;2",
@@ -166,22 +100,22 @@ formatter.scenario({
   "keyword": "Scenario Outline",
   "tags": [
     {
-      "line": 21,
+      "line": 3,
       "name": "@tag"
     },
     {
-      "line": 27,
+      "line": 9,
       "name": "@tag1"
     }
   ]
 });
 formatter.step({
-  "line": 29,
+  "line": 11,
   "name": "User in on the Home page of WilliamHill website",
   "keyword": "Given "
 });
 formatter.step({
-  "line": 30,
+  "line": 12,
   "name": "User chooses any \"Football\" events",
   "matchedColumns": [
     0
@@ -189,12 +123,16 @@ formatter.step({
   "keyword": "When "
 });
 formatter.step({
-  "line": 31,
-  "name": "predicts for the home team to win",
+  "line": 13,
+  "name": "predicts for 1 the home team to 1",
+  "matchedColumns": [
+    2,
+    3
+  ],
   "keyword": "And "
 });
 formatter.step({
-  "line": 32,
+  "line": 14,
   "name": "and places \"0.05\" bet",
   "matchedColumns": [
     1
@@ -202,20 +140,25 @@ formatter.step({
   "keyword": "And "
 });
 formatter.step({
-  "line": 33,
+  "line": 15,
   "name": "He has \"1\" bet in basket",
   "keyword": "Then "
 });
 formatter.step({
-  "line": 34,
-  "name": "it displays the odd and return",
+  "line": 16,
+  "name": "it displays the odd and return according to \"0.05\" stake, 1 and 1",
+  "matchedColumns": [
+    1,
+    2,
+    3
+  ],
   "keyword": "And "
 });
 formatter.match({
-  "location": "EnglishFootballLeagueBet_Test.user_in_on_the_Home_page_of_WilliamHill_website()"
+  "location": "EnglishFootballLeagueBet_Test.startsBrowserWithSelectedPage()"
 });
 formatter.result({
-  "duration": 9950385224,
+  "duration": 10877334380,
   "status": "passed"
 });
 formatter.match({
@@ -225,17 +168,27 @@ formatter.match({
       "offset": 18
     }
   ],
-  "location": "EnglishFootballLeagueBet_Test.user_chooses_any_football_events(String)"
+  "location": "EnglishFootballLeagueBet_Test.chooseSportCategory(String)"
 });
 formatter.result({
-  "duration": 1574600440,
+  "duration": 1387367157,
   "status": "passed"
 });
 formatter.match({
-  "location": "EnglishFootballLeagueBet_Test.predicts_for_the_home_team_to_Win()"
+  "arguments": [
+    {
+      "val": "1",
+      "offset": 13
+    },
+    {
+      "val": "1",
+      "offset": 32
+    }
+  ],
+  "location": "EnglishFootballLeagueBet_Test.selectSportEventAndPlaceBet(int,int)"
 });
 formatter.result({
-  "duration": 877731095,
+  "duration": 730016667,
   "status": "passed"
 });
 formatter.match({
@@ -245,10 +198,10 @@ formatter.match({
       "offset": 12
     }
   ],
-  "location": "EnglishFootballLeagueBet_Test.and_places_bet(String)"
+  "location": "EnglishFootballLeagueBet_Test.settleBetslip(String)"
 });
 formatter.result({
-  "duration": 649685284,
+  "duration": 787365819,
   "status": "passed"
 });
 formatter.match({
@@ -258,18 +211,35 @@ formatter.match({
       "offset": 8
     }
   ],
-  "location": "EnglishFootballLeagueBet_Test.he_has_bet_in_basket(String)"
+  "location": "EnglishFootballLeagueBet_Test.valideteNumberOfBets(String)"
 });
 formatter.result({
-  "duration": 105368144,
+  "duration": 93395749,
   "status": "passed"
 });
 formatter.match({
-  "location": "EnglishFootballLeagueBet_Test.it_displays_the_odd_and_return(String,String)"
+  "arguments": [
+    {
+      "val": "0.05",
+      "offset": 45
+    },
+    {
+      "val": "1",
+      "offset": 58
+    },
+    {
+      "val": "1",
+      "offset": 64
+    }
+  ],
+  "location": "EnglishFootballLeagueBet_Test.validateTotalReturnValue(String,int,int)"
 });
 formatter.result({
-  "duration": 548885,
-  "error_message": "cucumber.runtime.CucumberException: Arity mismatch: Step Definition \u0027stepDefinitions.EnglishFootballLeagueBet_Test.it_displays_the_odd_and_return(String,String) in file:/C:/Users/marcin.skowron/git/WHFootballBet/WHFootballBet/WHFootballBet/bin/\u0027 with pattern [^it displays the odd and return$] is declared with 2 parameters. However, the gherkin step has 0 arguments []. \nStep: And it displays the odd and return\r\n\tat cucumber.runtime.StepDefinitionMatch.arityMismatch(StepDefinitionMatch.java:102)\r\n\tat cucumber.runtime.StepDefinitionMatch.transformedArgs(StepDefinitionMatch.java:60)\r\n\tat cucumber.runtime.StepDefinitionMatch.runStep(StepDefinitionMatch.java:37)\r\n\tat cucumber.runtime.Runtime.runStep(Runtime.java:300)\r\n\tat cucumber.runtime.model.StepContainer.runStep(StepContainer.java:44)\r\n\tat cucumber.runtime.model.StepContainer.runSteps(StepContainer.java:39)\r\n\tat cucumber.runtime.model.CucumberScenario.run(CucumberScenario.java:44)\r\n\tat cucumber.runtime.junit.ExecutionUnitRunner.run(ExecutionUnitRunner.java:102)\r\n\tat org.junit.runners.Suite.runChild(Suite.java:128)\r\n\tat org.junit.runners.Suite.runChild(Suite.java:27)\r\n\tat org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)\r\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)\r\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)\r\n\tat org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)\r\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)\r\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:363)\r\n\tat cucumber.runtime.junit.ExamplesRunner.run(ExamplesRunner.java:59)\r\n\tat org.junit.runners.Suite.runChild(Suite.java:128)\r\n\tat org.junit.runners.Suite.runChild(Suite.java:27)\r\n\tat org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)\r\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)\r\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)\r\n\tat org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)\r\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)\r\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:363)\r\n\tat cucumber.runtime.junit.ScenarioOutlineRunner.run(ScenarioOutlineRunner.java:53)\r\n\tat cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:63)\r\n\tat cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:18)\r\n\tat org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)\r\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)\r\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)\r\n\tat org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)\r\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)\r\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:363)\r\n\tat cucumber.runtime.junit.FeatureRunner.run(FeatureRunner.java:70)\r\n\tat cucumber.api.junit.Cucumber.runChild(Cucumber.java:95)\r\n\tat cucumber.api.junit.Cucumber.runChild(Cucumber.java:38)\r\n\tat org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)\r\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)\r\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)\r\n\tat org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)\r\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)\r\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:363)\r\n\tat cucumber.api.junit.Cucumber.run(Cucumber.java:100)\r\n\tat org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)\r\n\tat org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)\r\n\tat org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)\r\n\tat org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:678)\r\n\tat org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)\r\n\tat org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)\r\n",
-  "status": "failed"
+  "duration": 149527981,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 1364420178,
+  "status": "passed"
 });
 });
