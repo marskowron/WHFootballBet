@@ -20,6 +20,7 @@ public class GeneralActions extends Driver{
 	static WebElement element;
 	static List<WebElement> elements;
 	
+	//general method which finds element
 	public static WebElement getElement(String locator, String type) {
 		type = type.toLowerCase();
 		if (type.equals("id")) {
@@ -60,7 +61,7 @@ public class GeneralActions extends Driver{
 		}
 	}
 	
-	
+	//method which waiting until element is visible
 	public static WebElement waitForElement(String locator, String type) {
 		WebElement searchedElement = getElement(locator, type);
 		

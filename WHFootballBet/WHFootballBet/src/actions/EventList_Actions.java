@@ -25,6 +25,7 @@ public class EventList_Actions extends EventList_Objects{
 
 		    System.out.println("Searched event is not \"Win/Draw/Lose\" type event");
 		
+		//choosing a correct button according to selected event result
 		WebElement buttonResult = null;
 
 		if (expectedResult == 1)
@@ -37,7 +38,7 @@ public class EventList_Actions extends EventList_Objects{
 	}
 	
 	public static double calculateOddsOfBet (int eventIndex, int expectedResult) throws Exception {
-		
+		//finding nominator, denominator and calculating correct odds
 		double betOdd;
 		double nominator;
 		double denominator;
